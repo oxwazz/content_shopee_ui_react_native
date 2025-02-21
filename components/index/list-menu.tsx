@@ -67,7 +67,7 @@ export function ListMenu() {
         >
           <View
             style={{
-              gap: 8,
+              gap: 6,
               flexDirection: 'row',
               paddingInline: 6,
             }}

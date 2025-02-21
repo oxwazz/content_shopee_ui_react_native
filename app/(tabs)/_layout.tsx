@@ -1,9 +1,12 @@
-import { COLORS } from '@/constants/colors'
-import { PlatformPressable, Text } from '@react-navigation/elements'
-import { useLinkBuilder, useTheme } from '@react-navigation/native'
 import { Tabs } from 'expo-router'
+import type { ReactNode } from 'react'
 import { View } from 'react-native'
 import Svg, { Circle, G, Path } from 'react-native-svg'
+
+import { COLORS } from '@/constants/colors'
+import type { BottomTabBarProps } from '@react-navigation/bottom-tabs'
+import { PlatformPressable, Text } from '@react-navigation/elements'
+import { useLinkBuilder } from '@react-navigation/native'
 
 export default function Layout() {
   return (
@@ -152,8 +155,7 @@ export default function Layout() {
   )
 }
 
-function MyTabBar({ state, descriptors, navigation }) {
-  const { colors } = useTheme()
+function MyTabBar({ state, descriptors, navigation }: BottomTabBarProps) {
   const { buildHref } = useLinkBuilder()
 
   return (
@@ -181,23 +183,12 @@ function MyTabBar({ state, descriptors, navigation }) {
           }
         }
 
-        const onLongPress = () => {
-          navigation.emit({
-            type: 'tabLongPress',
-            target: route.key,
-          })
-        }
-
         return (
           <PlatformPressable
-            // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-            key={index}
+            key={route.key}
             href={buildHref(route.name, route.params)}
             accessibilityState={isFocused ? { selected: true } : {}}
-            accessibilityLabel={options.tabBarAccessibilityLabel}
-            testID={options.tabBarButtonTestID}
             onPress={onPress}
-            onLongPress={onLongPress}
             style={{
               flex: 1,
               alignItems: 'center',
@@ -213,11 +204,13 @@ function MyTabBar({ state, descriptors, navigation }) {
                 alignItems: 'center',
               }}
             >
-              {options.tabBarIcon({
-                color: isFocused ? COLORS.primary400 : COLORS.grey400,
-                size: 24,
-                focused: isFocused,
-              })}
+              {options.tabBarIcon
+                ? options.tabBarIcon({
+                    color: isFocused ? COLORS.primary400 : COLORS.grey400,
+                    size: 24,
+                    focused: isFocused,
+                  })
+                : null}
             </View>
             <Text
               style={{
@@ -225,7 +218,7 @@ function MyTabBar({ state, descriptors, navigation }) {
                 fontSize: 10,
               }}
             >
-              {label}
+              {label as ReactNode}
             </Text>
           </PlatformPressable>
         )

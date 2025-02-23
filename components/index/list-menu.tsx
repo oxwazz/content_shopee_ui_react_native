@@ -18,7 +18,6 @@ export function ListMenu() {
 
   const onContentSizeChange = (width: number) => {
     setContentWidth(width)
-    console.log('Content width:', width)
   }
 
   // Calculate scrollbar dimensions

@@ -1,8 +1,9 @@
 import { LinearGradient } from 'expo-linear-gradient'
 import { Image, Text, View } from 'react-native'
-import Svg, { Path } from 'react-native-svg'
 
 import { COLORS } from '@/constants/colors'
+import { LIST_PRODUCT } from '@/constants/mocks'
+import { SvgMaterialSymbolsStarRounded } from '@/constants/svg-icons'
 import { MasonryFlashList } from '@shopify/flash-list'
 
 export const ListProduct = () => {
@@ -17,10 +18,9 @@ export const ListProduct = () => {
       colors={[COLORS.white, 'transparent']}
     >
       <MasonryFlashList
-        data={new Array(5).fill(0)}
+        data={LIST_PRODUCT}
         numColumns={2}
-        // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-        renderItem={({ index }: any) => {
+        renderItem={({ item, index }) => {
           const colNum = 2
           const gap = 8
           return (
@@ -46,7 +46,7 @@ export const ListProduct = () => {
                     aspectRatio: 1,
                     flex: 1,
                   }}
-                  source={require('../../assets/images/mock/#808080.webp')}
+                  source={item.image}
                 />
                 <View
                   style={{
@@ -60,16 +60,19 @@ export const ListProduct = () => {
                       textAlignVertical: 'top',
                     }}
                   >
-                    <Image
-                      style={{
-                        height: 13,
-                        width: 13 * (188 / 48),
-                        transform: 'translateY(1px)',
-                      }}
-                      source={require('../../assets/images/other/label-mall-ori.png')}
-                    />{' '}
-                    Samsung Galaxy S25 Ultra 12/518GB - Titanium Black - Garansi
-                    Resmi
+                    {item.label && (
+                      <>
+                        <Image
+                          style={{
+                            height: 13,
+                            width: 13 * (188 / 48),
+                            transform: 'translateY(1px)',
+                          }}
+                          source={item.label}
+                        />{' '}
+                      </>
+                    )}
+                    {item.name}
                   </Text>
                   <View
                     style={{
@@ -85,13 +88,11 @@ export const ListProduct = () => {
                       justifyContent: 'center',
                     }}
                   >
-                    <Svg width={16} height={16} viewBox="0 0 24 24">
-                      <Path
-                        fill={COLORS.yellow400}
-                        d="m12 17.275-4.15 2.5q-.275.175-.575.15t-.525-.2-.35-.437-.05-.588l1.1-4.725L3.775 10.8q-.25-.225-.312-.513t.037-.562.3-.45.55-.225l4.85-.425 1.875-4.45q.125-.3.388-.45t.537-.15.537.15.388.45l1.875 4.45 4.85.425q.35.05.55.225t.3.45.038.563-.313.512l-3.675 3.175 1.1 4.725q.075.325-.05.588t-.35.437-.525.2-.575-.15z"
-                      />
-                    </Svg>
-                    <Text style={{ fontSize: 11 }}>4.6</Text>
+                    <SvgMaterialSymbolsStarRounded
+                      size={16}
+                      color={COLORS.yellow400}
+                    />
+                    <Text style={{ fontSize: 11 }}>{item.rating}</Text>
                   </View>
                   <View
                     style={{
@@ -108,7 +109,7 @@ export const ListProduct = () => {
                         fontSize: 16,
                       }}
                     >
-                      Rp 24.999.999
+                      {item.price}
                     </Text>
                     <Text
                       numberOfLines={1}
@@ -117,7 +118,7 @@ export const ListProduct = () => {
                         fontSize: 10,
                       }}
                     >
-                      2910 terjual
+                      {item.totalSold} terjual
                     </Text>
                   </View>
                 </View>

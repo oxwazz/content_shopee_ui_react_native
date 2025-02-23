@@ -20,7 +20,7 @@ export default function Page() {
           paddingBottom: insets.bottom,
           paddingLeft: insets.left,
           paddingRight: insets.right,
-          backgroundColor: COLORS.backgroundColor,
+          backgroundColor: COLORS.grey50,
         }}
         stickyHeaderIndices={[0]}
         showsVerticalScrollIndicator={false}

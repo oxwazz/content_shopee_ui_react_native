@@ -1,8 +1,8 @@
 import { LinearGradient } from 'expo-linear-gradient'
 import { Image, Text, View } from 'react-native'
-import Svg, { Path } from 'react-native-svg'
 
 import { COLORS } from '@/constants/colors'
+import { SvgShopeeArrowRight } from '@/constants/svg-icons'
 
 export function ShopeeLive() {
   return (
@@ -33,17 +33,7 @@ export function ShopeeLive() {
         >
           Shopee Live
         </Text>
-        <Svg
-          width={8}
-          height={8}
-          className="stardust-icon stardust-icon-arrow-right"
-          viewBox="0 0 11 11"
-        >
-          <Path
-            fillOpacity={0.54}
-            d="M2.5 11c.1 0 .2 0 .3-.1l6-5c.1-.1.2-.3.2-.4s-.1-.3-.2-.4l-6-5c-.2-.2-.5-.1-.7.1s-.1.5.1.7l5.5 4.6-5.5 4.6c-.2.2-.2.5-.1.7.1.1.3.2.4.2z"
-          />
-        </Svg>
+        <SvgShopeeArrowRight size={8} color={COLORS.grey400} />
       </View>
       <View
         style={{

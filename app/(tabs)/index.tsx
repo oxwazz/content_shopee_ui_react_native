@@ -1,14 +1,14 @@
-import { StatusBar } from 'expo-status-bar'
-import { ScrollView, View } from 'react-native'
-import { useSafeAreaInsets } from 'react-native-safe-area-context'
+import { StatusBar } from "expo-status-bar"
+import { ScrollView, View } from "react-native"
+import { useSafeAreaInsets } from "react-native-safe-area-context"
 
-import { Flashsale } from '@/components/index/flashsale'
-import { Header } from '@/components/index/header'
-import { ListMenu } from '@/components/index/list-menu'
-import { ListProduct } from '@/components/index/list-product'
-import { ShopeeLive } from '@/components/index/shopee-live'
-import { SimpleWalletInfo } from '@/components/index/simple-wallet-info'
-import { COLORS } from '@/constants/colors'
+import { Flashsale } from "@/components/index/flashsale"
+import { Header } from "@/components/index/header"
+import { ListMenu } from "@/components/index/list-menu"
+import { ListProduct } from "@/components/index/list-product"
+import { ShopeeLive } from "@/components/index/shopee-live"
+import { SimpleWalletInfo } from "@/components/index/simple-wallet-info"
+import { COLORS } from "@/constants/colors"
 
 export default function Page() {
   const insets = useSafeAreaInsets()
@@ -31,7 +31,7 @@ export default function Page() {
         <ListMenu />
         <View
           style={{
-            flexDirection: 'row',
+            flexDirection: "row",
             gap: 8,
             paddingInline: 10,
             paddingTop: 10,

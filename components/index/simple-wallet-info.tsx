@@ -1,5 +1,5 @@
 import { LinearGradient } from 'expo-linear-gradient'
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, Text, View } from 'react-native'
 
 import { COLORS } from '@/constants/colors'
 import {
@@ -20,9 +20,8 @@ export function SimpleWalletInfo() {
     >
       <View
         style={{
-          backgroundColor: 'white',
+          backgroundColor: COLORS.white,
           padding: 10,
-          minHeight: 70,
           borderRadius: 8,
           flexDirection: 'row',
           alignItems: 'center',
@@ -42,7 +41,7 @@ export function SimpleWalletInfo() {
           <View
             style={{
               backgroundColor: COLORS.black,
-              width: StyleSheet.hairlineWidth,
+              width: 1,
               height: '70%',
               opacity: 0.2,
             }}
@@ -87,7 +86,7 @@ export function SimpleWalletInfo() {
           <View
             style={{
               backgroundColor: COLORS.black,
-              width: StyleSheet.hairlineWidth,
+              width: 1,
               height: '70%',
               opacity: 0.2,
             }}
@@ -104,7 +103,6 @@ export function SimpleWalletInfo() {
                 style={{
                   width: 17,
                   height: 17,
-                  resizeMode: 'contain',
                 }}
                 source={require('../../assets/images/other/coin-shopee.webp')}
               />
@@ -140,7 +138,7 @@ export function SimpleWalletInfo() {
           <View
             style={{
               backgroundColor: COLORS.black,
-              width: StyleSheet.hairlineWidth,
+              width: 1,
               height: '70%',
               opacity: 0.2,
             }}
@@ -176,7 +174,7 @@ export function SimpleWalletInfo() {
         <View
           style={{
             backgroundColor: COLORS.black,
-            width: StyleSheet.hairlineWidth,
+            width: 1,
             height: '70%',
             opacity: 0.2,
           }}

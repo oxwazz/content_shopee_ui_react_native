@@ -1,14 +1,14 @@
-import { LinearGradient } from 'expo-linear-gradient'
-import { Image, Text, View } from 'react-native'
+import { LinearGradient } from "expo-linear-gradient"
+import { Image, Text, View } from "react-native"
 
-import { COLORS } from '@/constants/colors'
-import { SvgShopeeArrowRight } from '@/constants/svg-icons'
+import { COLORS } from "@/constants/colors"
+import { SvgShopeeArrowRight } from "@/constants/svg-icons"
 
 export function ShopeeLive() {
   return (
     <View
       style={{
-        backgroundColor: 'white',
+        backgroundColor: COLORS.white,
         paddingInline: 6,
         paddingBlock: 12,
         borderRadius: 8,
@@ -19,8 +19,8 @@ export function ShopeeLive() {
     >
       <View
         style={{
-          flexDirection: 'row',
-          alignItems: 'center',
+          flexDirection: "row",
+          alignItems: "center",
           gap: 4,
           height: 20,
         }}
@@ -37,7 +37,7 @@ export function ShopeeLive() {
       </View>
       <View
         style={{
-          flexDirection: 'row',
+          flexDirection: "row",
           gap: 4,
           flex: 1,
         }}
@@ -48,34 +48,32 @@ export function ShopeeLive() {
               key={v}
               style={{
                 flex: 1,
-                backgroundColor: 'grey',
                 borderRadius: 8,
-                justifyContent: 'flex-end',
-                position: 'relative',
-                overflow: 'hidden',
+                justifyContent: "flex-end",
+                position: "relative",
+                overflow: "hidden",
               }}
             >
               <Image
                 style={{
-                  height: '100%',
-                  width: '100%',
-                  resizeMode: 'cover',
-                  position: 'absolute',
+                  height: "100%",
+                  width: "100%",
+                  position: "absolute",
                 }}
-                source={require('../../assets/images/mock/#808080.webp')}
+                resizeMode='cover'
+                source={require("../../assets/images/mock/#808080.webp")}
               />
               <LinearGradient
                 start={[0, 0]}
                 end={[1, 0]}
-                locations={[0, 1]}
                 colors={[COLORS.primary400, COLORS.primary200]}
                 style={{
-                  position: 'absolute',
+                  position: "absolute",
                   top: 4,
                   left: 4,
-                  flexDirection: 'row',
+                  flexDirection: "row",
                   gap: 4,
-                  alignItems: 'center',
+                  alignItems: "center",
                   paddingInline: 3,
                   borderRadius: 4,
                 }}
@@ -84,7 +82,7 @@ export function ShopeeLive() {
                   style={{
                     height: 7,
                     width: 7,
-                    borderRadius: '100%',
+                    borderRadius: "100%",
                     backgroundColor: COLORS.white,
                   }}
                 />

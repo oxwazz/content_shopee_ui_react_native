@@ -11,6 +11,15 @@
 - [x] Homepage
 - [ ] ...
 
+## 📂 Branch Structure
+
+```
+content_shopee_ui_react_native/
+│── main
+│── 0-init-project
+│── 1-homepage
+```
+
 ---
 
 Made with ❤️ by [Muhammad Rahmahalim](https://github.com/oxwazz)

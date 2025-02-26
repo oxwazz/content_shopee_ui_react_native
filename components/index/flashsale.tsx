@@ -1,8 +1,8 @@
-import { LinearGradient } from "expo-linear-gradient"
-import { Image, Text, View } from "react-native"
+import { LinearGradient } from 'expo-linear-gradient'
+import { Image, Text, View } from 'react-native'
 
-import { COLORS } from "@/constants/colors"
-import { SvgShopeeArrowRight } from "@/constants/svg-icons"
+import { COLORS } from '@/constants/colors'
+import { SvgShopeeArrowRight } from '@/constants/svg-icons'
 
 export function Flashsale() {
   return (
@@ -19,37 +19,36 @@ export function Flashsale() {
     >
       <View
         style={{
-          flexDirection: "row",
-          alignItems: "center",
+          flexDirection: 'row',
+          alignItems: 'center',
           gap: 4,
           height: 20,
         }}
       >
         <Image
           style={{
-            height: "100%",
+            height: '100%',
             width: 80,
           }}
-          resizeMode='contain'
-          source={require("../../assets/images/other/logo-flash-sale.png")}
+          resizeMode="contain"
+          source={require('../../assets/images/other/logo-flash-sale.png')}
         />
         <SvgShopeeArrowRight size={8} color={COLORS.grey400} />
       </View>
       <View
         style={{
-          flexDirection: "row",
+          flexDirection: 'row',
           gap: 4,
           flex: 1,
         }}
       >
         <LinearGradient
-          locations={[0, 1]}
           colors={[COLORS.primary400, COLORS.primary50]}
           style={{
             flex: 1,
             borderRadius: 8,
-            justifyContent: "space-between",
-            alignItems: "center",
+            justifyContent: 'space-between',
+            alignItems: 'center',
           }}
         >
           <Text
@@ -65,25 +64,25 @@ export function Flashsale() {
           </Text>
           <View
             style={{
-              width: "100%",
-              alignItems: "center",
+              width: '100%',
+              alignItems: 'center',
             }}
           >
             <Image
               style={{
-                height: "80%",
-                width: "80%",
+                height: '80%',
+                width: '80%',
                 flex: 1,
                 aspectRatio: 1,
                 borderRadius: 8,
               }}
               resizeMode="cover"
-              source={require("../../assets/images/mock/#808080.webp")}
+              source={require('../../assets/images/mock/#808080.webp')}
             />
           </View>
           <View
             style={{
-              alignItems: "center",
+              alignItems: 'center',
               padding: 4,
             }}
           >
@@ -97,11 +96,9 @@ export function Flashsale() {
             >
               <Text
                 style={{
-                  color: COLORS.primary400,
                   fontSize: 10,
                   fontWeight: 500,
                 }}
-                numberOfLines={1}
               >
                 Rp
               </Text>
@@ -123,24 +120,24 @@ export function Flashsale() {
           style={{
             flex: 1,
             borderRadius: 8,
-            position: "relative",
+            position: 'relative',
           }}
         >
           <View
             style={{
-              width: "100%",
+              width: '100%',
             }}
           >
             <Image
               style={{
-                height: "100%",
-                width: "100%",
+                height: '100%',
+                width: '100%',
                 flex: 1,
                 aspectRatio: 1,
                 borderRadius: 8,
               }}
               resizeMode="cover"
-              source={require("../../assets/images/mock/#808080.webp")}
+              source={require('../../assets/images/mock/#808080.webp')}
             />
           </View>
 
@@ -150,26 +147,26 @@ export function Flashsale() {
               height: 30 * (72 / 96),
               top: 3,
               left: -3,
-              position: "absolute",
+              position: 'absolute',
             }}
             resizeMode="contain"
-            source={require("../../assets/images/other/label-star.png")}
+            source={require('../../assets/images/other/label-star.png')}
           />
           <View
             style={{
-              position: "absolute",
+              position: 'absolute',
               top: 0,
               right: 0,
               borderTopEndRadius: 8,
-              flexDirection: "row",
-              overflow: "hidden",
+              flexDirection: 'row',
+              overflow: 'hidden',
             }}
           >
             <LinearGradient
               start={[0, 0]}
               end={[1, 0]}
               locations={[0.5, 0.5]}
-              colors={["transparent", COLORS.yellow100]}
+              colors={['transparent', COLORS.yellow100]}
             >
               <Image
                 style={{
@@ -177,13 +174,13 @@ export function Flashsale() {
                   height: 17,
                 }}
                 resizeMode="contain"
-                source={require("../../assets/images/other/icon-flashsale.png")}
+                source={require('../../assets/images/other/icon-flashsale.png')}
               />
             </LinearGradient>
             <View
               style={{
                 backgroundColor: COLORS.yellow100,
-                justifyContent: "center",
+                justifyContent: 'center',
                 paddingLeft: 2,
               }}
             >
@@ -194,14 +191,14 @@ export function Flashsale() {
                   fontWeight: 700,
                 }}
               >
-                -21%{" "}
+                -21%{' '}
               </Text>
             </View>
           </View>
 
           <View
             style={{
-              alignItems: "center",
+              alignItems: 'center',
               padding: 4,
               gap: 4,
             }}
@@ -233,8 +230,7 @@ export function Flashsale() {
               colors={[COLORS.red400, COLORS.primary100]}
               style={{
                 borderRadius: 8,
-                justifyContent: "space-between",
-                alignItems: "center",
+
                 paddingInline: 8,
               }}
             >

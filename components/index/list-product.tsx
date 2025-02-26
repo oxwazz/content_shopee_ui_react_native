@@ -1,10 +1,10 @@
-import { LinearGradient } from "expo-linear-gradient"
-import { Image, Text, View } from "react-native"
+import { LinearGradient } from 'expo-linear-gradient'
+import { Image, Text, View } from 'react-native'
 
-import { COLORS } from "@/constants/colors"
-import { LIST_PRODUCT } from "@/constants/mocks"
-import { SvgMaterialSymbolsStarRounded } from "@/constants/svg-icons"
-import { MasonryFlashList } from "@shopify/flash-list"
+import { COLORS } from '@/constants/colors'
+import { LIST_PRODUCT } from '@/constants/mocks'
+import { SvgMaterialSymbolsStarRounded } from '@/constants/svg-icons'
+import { MasonryFlashList } from '@shopify/flash-list'
 
 export const ListProduct = () => {
   return (
@@ -15,7 +15,7 @@ export const ListProduct = () => {
         borderRadius: 8,
       }}
       locations={[0.1, 0.3]}
-      colors={[COLORS.white, "transparent"]}
+      colors={[COLORS.white, 'transparent']}
     >
       <MasonryFlashList
         data={LIST_PRODUCT}
@@ -36,56 +36,52 @@ export const ListProduct = () => {
                 style={{
                   backgroundColor: COLORS.white,
                   borderRadius: 4,
-                  overflow: "hidden",
+                  overflow: 'hidden',
                 }}
               >
                 <Image
                   style={{
-                    height: "100%",
-                    width: "100%",
+                    height: '100%',
+                    width: '100%',
                     aspectRatio: 1,
                     flex: 1,
                   }}
                   source={item.image}
                 />
+
                 <View
                   style={{
                     padding: 8,
                     gap: 4,
                   }}
                 >
-                  <Text
-                    numberOfLines={2}
-                    style={{
-                      textAlignVertical: "top",
-                    }}
-                  >
+                  <Text numberOfLines={2}>
                     {item.label && (
                       <>
                         <Image
                           style={{
                             height: 13,
                             width: 13 * (188 / 48),
-                            transform: "translateY(1px)",
+                            transform: 'translateY(1px)',
                           }}
                           source={item.label}
-                        />{" "}
+                        />{' '}
                       </>
                     )}
                     {item.name}
                   </Text>
                   <View
                     style={{
-                      flexDirection: "row",
-                      alignItems: "center",
+                      flexDirection: 'row',
+                      alignItems: 'center',
                       gap: 2,
                       backgroundColor: COLORS.yellow50,
                       paddingInline: 2,
-                      borderStyle: "solid",
+                      borderStyle: 'solid',
                       borderColor: COLORS.yellow400,
                       borderWidth: 0.8,
-                      alignSelf: "flex-start",
-                      justifyContent: "center",
+                      alignSelf: 'flex-start',
+                      justifyContent: 'center',
                     }}
                   >
                     <SvgMaterialSymbolsStarRounded
@@ -96,9 +92,9 @@ export const ListProduct = () => {
                   </View>
                   <View
                     style={{
-                      width: "100%",
-                      flexDirection: "row",
-                      alignItems: "center",
+                      width: '100%',
+                      flexDirection: 'row',
+                      alignItems: 'center',
                       gap: 6,
                     }}
                   >
